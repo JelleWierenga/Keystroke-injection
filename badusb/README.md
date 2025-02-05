@@ -111,7 +111,7 @@ Invoke-WebRequest -Uri "http://{rpi ip}:5000/upload" -Method POST -InFile "C:\\T
 
 ### 🌍 3. Data Reception & Storage (Pi 4)
 The `server.py` script listens for POST requests and logs incoming data:
-```pycon
+```python
 from flask import Flask, request
 app = Flask(__name__)
 @app.route('/upload', methods=['POST'])
